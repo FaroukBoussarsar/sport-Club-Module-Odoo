@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sportclub_owner,sportclub_owner,model_sportclub_owner,base.group_user,1,1,1,1
+access_sportclub_player,sportclub_player,model_sportclub_player,base.group_user,1,1,1,1

@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <!-- list student -->
+        <record model="ir.ui.view" id="review_list_view">
+            <field name="name">review list</field>
+            <field name="model">sportclub.review</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="score"/>
+                    <field name="description"/>
+                    <field name="creaation_date"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- student form -->
+        <record model="ir.ui.view" id="student_form_view">
+            <field name="name">review Form</field>
+            <field name="model">sportclub.review</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="code"/>
+                        <field name="score"/>
+                        <field name="description"/>
+                        <field name="creaation_date"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+
+        <!-- actions opening views on models -->
+        <!-- student action -->
+
+        <record model="ir.actions.act_window" id="review_action_window">
+            <field name="name">review window</field>
+            <field name="res_model">sportclub.review</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--
+        <record model="ir.actions.act_window" id="university.action_window">
+          <field name="name">university window</field>
+          <field name="res_model">university.university</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        -->
+
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="university.action_server">
+          <field name="name">university server</field>
+          <field name="model_id" ref="model_university_university"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
+
+        <!-- Top menu item -->
+        <menuitem name="Sport Club" id="sportclub.menu_root"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="review" id="sportclub_review_cat"
+                  parent="sportclub.menu_root"/>
+
+
+        <!--
+        <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>
+        -->
+        <!-- actions -->
+
+        <menuitem name="List of reviews" id="sportclub_review_list"
+                  parent="sportclub_review_cat"
+                  action="review_action_window"/>
+
+
+        <!--
+        <menuitem name="Server to list" id="university" parent="university.menu_2"
+                  action="university.action_server"/>
+        -->
+    </data>
+</odoo>

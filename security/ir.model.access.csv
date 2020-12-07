@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sportclub_owner,sportclub_owner,model_sportclub_owner,base.group_user,1,1,1,1
 access_sportclub_player,sportclub_player,model_sportclub_player,base.group_user,1,1,1,1
+access_sportclub_reservation,sportclub_reservation,model_sportclub_reservation,base.group_user,1,1,1,1
+access_sportclub_review,sportclub_review,model_sportclub_review,base.group_user,1,1,1,1
+access_sportclub_sportclub,sportclub_sportclub,model_sportclub_sportclub,base.group_user,1,1,1,1
+access_sportclub_stadium,sportclub_stadium,model_sportclub_stadium,base.group_user,1,1,1,1

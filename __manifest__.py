@@ -26,7 +26,11 @@
     'data': [
         'security/ir.model.access.csv',
         'views/owner_views.xml',
-        'views/player_views.xml'
+        'views/player_views.xml',
+        'views/reservation_views.xml',
+        'views/review_views.xml',
+        'views/sportclub_views.xml',
+        'views/stadium_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

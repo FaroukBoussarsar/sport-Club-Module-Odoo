@@ -7,7 +7,7 @@
             <field name="model">sportclub.sportclub</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
+                    <field name="sportclub_name"/>
                     <field name="code"/>
                     <field name="creaation_date"/>
                     <field name="surface"/>
@@ -24,7 +24,7 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="name"/>
+                        <field name="sportclub_name"/>
                         <field name="code"/>
                         <field name="creaation_date"/>
                         <field name="surface"/>

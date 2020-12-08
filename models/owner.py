@@ -12,7 +12,4 @@ class SportClubOwner(models.Model):
     address = fields.Text('Address')
     email = fields.Char('email')
     phone = fields.Char('phone number')
-  #  departement_id = fields.Many2one(comodel_name='university.departement')
-  #  subject_id = fields.Many2one(comodel_name='university.subject')
-  #  classroom_ids = fields.Many2many(comodel_name='university.classroom', relation='prof_class_rel', column1='f_name',
-      #                               column2='name')
+    sportclub_ids = fields.One2many(comodel_name='sportclub.sportclub', inverse_name='owner_id')

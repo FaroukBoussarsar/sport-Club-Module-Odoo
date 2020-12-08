@@ -34,6 +34,11 @@
                     <field name="email"/>
                      <field name="phone"/>
                     </group>
+                      <notebook>
+                        <page string="liste of sportclubs">
+                            <field name="sportclub_ids"/>
+                        </page>
+                    </notebook>
 
                 </form>
             </field>

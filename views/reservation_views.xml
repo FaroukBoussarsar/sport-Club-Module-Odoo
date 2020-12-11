@@ -67,12 +67,12 @@
         -->
 
         <!-- Top menu item -->
-        <menuitem name="Sport Club" id="sportclub.menu_root"/>
+        <menuitem name="Sport Club" id="sportclub"/>
 
         <!-- menu categories -->
 
         <menuitem name="reservation" id="sportclub_reservation_cat"
-                  parent="sportclub.menu_root"/>
+                  parent="sportclub"/>
 
 
         <!--

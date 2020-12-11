@@ -75,12 +75,12 @@
         -->
 
         <!-- Top menu item -->
-        <menuitem name="Sport Club" id="sportclub.menu_root"/>
+        <menuitem name="Sport Club" id="sportclub"/>
 
         <!-- menu categories -->
 
         <menuitem name="player" id="sportclub_player_cat"
-                  parent="sportclub.menu_root"/>
+                  parent="sportclub"/>
 
 
         <!--

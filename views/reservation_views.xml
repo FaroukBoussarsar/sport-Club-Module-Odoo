@@ -7,7 +7,8 @@
             <field name="model">sportclub.reservation</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="code"/>
+ <field name="player_id"/>
+
                     <field name="duration"/>
                     <field name="reservation_date"/>
 
@@ -23,7 +24,7 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="code"/>
+  <field name="code"/>
                         <field name="duration"/>
                         <field name="reservation_date"/>
                     </group>

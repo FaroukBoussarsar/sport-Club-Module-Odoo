@@ -7,7 +7,7 @@
             <field name="model">sportclub.stadium</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="code"/>
+                    <field name="stadium_name"/>
                     <field name="capacity"/>
                     <field name="creaation_date"/>
 
@@ -23,7 +23,7 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="code"/>
+                        <field name="stadium_name"/>
                         <field name="capacity"/>
                         <field name="creaation_date"/>
 

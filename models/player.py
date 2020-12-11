@@ -16,7 +16,7 @@ class SportClubPlayer(models.Model):
 
     review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='player_id')
     reservation_ids = fields.One2many(comodel_name='sportclub.reservation', inverse_name='player_id')
-    fullname = fields.Char(compute='getfullname')
+    fullname = fields.Char(compute='getfullname', default="player")
 
     def getfullname(self):
         self.fullname = self.f_name + ' ' + self.l_name

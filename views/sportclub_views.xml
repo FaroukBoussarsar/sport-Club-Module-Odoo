@@ -30,6 +30,14 @@
                         <field name="surface"/>
 
                     </group>
+                     <notebook>
+                        <page string="liste of stadium">
+                            <field name="stadium_ids"/>
+                        </page>
+                         <page string="liste of review">
+                            <field name="review_ids"/>
+                        </page>
+                    </notebook>
 
                 </form>
             </field>

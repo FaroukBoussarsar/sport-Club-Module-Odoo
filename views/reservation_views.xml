@@ -27,6 +27,12 @@
                         <field name="duration"/>
                         <field name="reservation_date"/>
                     </group>
+                     <notebook>
+                        <page string="liste of stadium">
+                            <field name="stadium_ids"/>
+                        </page>
+
+                    </notebook>
 
                 </form>
             </field>

@@ -9,3 +9,6 @@ class SportClubReview(models.Model):
     score = fields.Float()
     description = fields.Text()
     creaation_date = fields.Datetime('creation date')
+    sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub')
+
+    player_id = fields.Many2one(comodel_name='sportclub.player')

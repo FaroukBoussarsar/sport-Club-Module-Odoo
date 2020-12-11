@@ -9,3 +9,5 @@ class SportClub(models.Model):
     creaation_date = fields.Datetime('creation date')
     surface = fields.Float()
     owner_id = fields.Many2one(comodel_name='sportclub.owner')
+    stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='sportclub_id')
+    review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='sportclub_id')

@@ -35,6 +35,14 @@
                      <field name="phone"/>
                         <field name="identity_card"/>
                     </group>
+                     <notebook>
+                        <page string="liste of stadium">
+                            <field name="reservation_ids"/>
+                        </page>
+                         <page string="liste of review">
+                            <field name="review_ids"/>
+                        </page>
+                    </notebook>
 
                 </form>
             </field>

@@ -8,5 +8,7 @@ class SportClubReservation(models.Model):
     code = fields.Char()
     duration = fields.Float()
     reservation_date = fields.Datetime('reservation date')
+    player_id = fields.Many2one(comodel_name='sportclub.player')
+    stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='reservation_ids')
 
 

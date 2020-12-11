@@ -14,5 +14,8 @@ class SportClubPlayer(models.Model):
     phone = fields.Char('phone number')
     identity_card = fields.Char('Identity card')
 
+    review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='player_id')
+    reservation_ids = fields.One2many(comodel_name='sportclub.reservation', inverse_name='player_id')
+
 
 

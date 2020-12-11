@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from my_addons.sportclub.models import player
+#from my_addons.sportclub.models import player
 from odoo import models, fields
 import uuid
 
@@ -8,8 +8,8 @@ class SportClubReservation(models.Model):
     _rec_name = 'code'
     #stadium_name = fields.Char(String='name')
     code = fields.Char(compute='getuniqueid')
-    duration = fields.Float()
-    reservation_date = fields.Datetime('reservation date')
+    duration = fields.Float(required=True)
+    reservation_date = fields.Datetime('reservation date', default=fields.Date.today)
     player_id = fields.Many2one(comodel_name='sportclub.player')
    #stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='reservation_ids')
 

@@ -18,6 +18,7 @@ class SportClubStadium(models.Model):
                                    column1='stadium_name',
                                    column2='code' ,readonly=True)
 
+
     def getuniqueid(self):
         self.code_stadium = uuid.uuid1()
 

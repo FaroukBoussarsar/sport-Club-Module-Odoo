@@ -18,9 +18,8 @@ class SportClub(models.Model):
     owner_id = fields.Many2one(comodel_name='sportclub.owner', readonly=True)
     # stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='sportclub_id', required=True)
     review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='sportclub_id')
-    stadium_ids = fields.Many2many(comodel_name='sportclub.stadium', relation='class_sport_stad',
-                                   column1='sportclub_name',
-                                   column2='stadium_name')
+   # stadium_ids = fields.Many2many(comodel_name='sportclub.stadium', relation='class_sport_stad',  column1='sportclub_name', column2='stadium_name')
+    stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='sportclub_id')
     def getuniqueid(self):
         self.code_sportclub = uuid.uuid1()
 

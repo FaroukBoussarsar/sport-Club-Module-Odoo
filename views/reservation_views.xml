@@ -17,20 +17,21 @@
         </record>
 
 
-
         <record model="ir.ui.view" id="student_form_view">
             <field name="name">reservation Form</field>
             <field name="model">sportclub.reservation</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
-  <field name="code"/>
-                                            <field name="player_id"/>
+                        <field name="code"/>
+                        <field name="player_id"/>
 
                         <field name="duration"/>
-                        <field name="reservation_date"/>
+                        <field name="reservation_date"  />
+                        <field name="player_id"  />
+
                     </group>
-                     <notebook>
+                    <notebook>
                         <page string="liste of stadium">
                             <field name="stadium_ids"/>
                         </page>
@@ -52,7 +53,6 @@
         </record>
 
 
-
         <!-- Top menu item -->
         <menuitem name="Sport Club" id="sportclub"/>
 
@@ -62,13 +62,11 @@
                   parent="sportclub"/>
 
 
-
         <!-- actions -->
 
         <menuitem name="List of reservations" id="sportclub_reservation_list"
                   parent="sportclub_reservation_cat"
                   action="reservation_action_window"/>
-
 
 
     </data>

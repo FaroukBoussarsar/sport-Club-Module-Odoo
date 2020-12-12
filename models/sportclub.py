@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from AptUrl.Helpers import _
+
 
 from odoo import models, fields, api
 
@@ -28,4 +28,4 @@ class SportClub(models.Model):
     @api.constrains('surface')
     def _check_value(self):
         if self.surface <= 0:
-            raise ValidationError(_('surface needs to be positive'))
+            raise ValidationError('surface needs to be positive')

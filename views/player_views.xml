@@ -12,13 +12,13 @@
                     <field name="gender"/>
                     <field name="image"/>
                     <field name="birthday"/>
-                     <field name="address"/>
+                    <field name="address"/>
                     <field name="email"/>
-                     <field name="phone"/>
+                    <field name="phone"/>
+
                 </tree>
             </field>
         </record>
-
 
 
         <record model="ir.ui.view" id="student_form_view">
@@ -28,20 +28,22 @@
                 <form>
                     <group>
                         <field name="f_name"/>
-                    <field name="l_name"/>
-                    <field name="gender"/>
+                        <field name="l_name"/>
+                        <field name="gender"/>
                         <field name="image" type="Image"/>
-                    <field name="birthday"/>
-                     <field name="address"/>
-                    <field name="email"/>
-                     <field name="phone"/>
+                        <field name="birthday"/>
+                        <field name="address"/>
+                        <field name="email"/>
+                        <field name="phone"/>
                         <field name="identity_card"/>
+
+
                     </group>
-                     <notebook>
+                    <notebook>
                         <page string="liste of stadium">
                             <field name="reservation_ids"/>
                         </page>
-                         <page string="liste of review">
+                        <page string="liste of review">
                             <field name="review_ids"/>
                         </page>
                     </notebook>
@@ -51,14 +53,11 @@
         </record>
 
 
-
-
         <record model="ir.actions.act_window" id="player_action_window">
             <field name="name">player window</field>
             <field name="res_model">sportclub.player</field>
             <field name="view_mode">tree,form</field>
         </record>
-
 
 
         <!-- Top menu item -->
@@ -70,13 +69,11 @@
                   parent="sportclub"/>
 
 
-
         <!-- actions -->
 
         <menuitem name="List of players" id="sportclub_player_list"
                   parent="sportclub_player_cat"
                   action="player_action_window"/>
-
 
 
     </data>

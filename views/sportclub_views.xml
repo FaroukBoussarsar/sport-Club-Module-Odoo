@@ -28,6 +28,8 @@
 
                         <field name="creaation_date"/>
                         <field name="surface"/>
+                         <field name="owner_id"/>
+
 
                     </group>
                      <notebook>

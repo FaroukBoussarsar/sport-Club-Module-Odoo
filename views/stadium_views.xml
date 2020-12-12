@@ -16,7 +16,6 @@
         </record>
 
 
-
         <record model="ir.ui.view" id="student_form_view">
             <field name="name">stadium Form</field>
             <field name="model">sportclub.stadium</field>
@@ -26,6 +25,9 @@
                         <field name="stadium_name"/>
                         <field name="capacity"/>
                         <field name="creaation_date"/>
+                        <field name="sportclub_id"/>
+                        <field name="reservation_ids"/>
+
 
                     </group>
 
@@ -44,7 +46,6 @@
         </record>
 
 
-
         <!-- Top menu item -->
         <menuitem name="Sport Club" id="sportclub"/>
 
@@ -54,13 +55,11 @@
                   parent="sportclub"/>
 
 
-
         <!-- actions -->
 
         <menuitem name="List of stadiums" id="sportclub_stadium_list"
                   parent="sportclub_stadium_cat"
                   action="stadium_action_window"/>
-
 
 
     </data>

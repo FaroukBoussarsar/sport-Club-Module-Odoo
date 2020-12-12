@@ -16,7 +16,7 @@ class SportClubStadium(models.Model):
     reservation_ids = fields.Many2one(comodel_name='sportclub.reservation')
     stadium_ids = fields.Many2many(comodel_name='sportclub.reservation', relation='class_sport_stad',
                                    column1='stadium_name',
-                                   column2='sportclub_name')
+                                   column2='sportclub_name' ,default='no stadium')
 
     def getuniqueid(self):
         self.code_stadium = uuid.uuid1()

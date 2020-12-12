@@ -11,7 +11,7 @@ class SportClubReview(models.Model):
     code = fields.Char(compute='getuniqueid')
     score = fields.Float(required=True)
     description = fields.Text()
-    creaation_date = fields.Datetime('creation date', default=fields.Date.today)
+    creaation_date = fields.Datetime('creation date', default=fields.Datetime.today)
     sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub')
 
     player_id = fields.Many2one(comodel_name='sportclub.player')
@@ -26,5 +26,5 @@ class SportClubReview(models.Model):
 
     @api.constrains('score')
     def _check_value(self):
-        if 0 >= self.score > 10:
-            raise ValidationError('surface needs to be positive')
+        if not( 0 >= self.score > 10):
+            raise ValidationError('score is between 0 and 10')

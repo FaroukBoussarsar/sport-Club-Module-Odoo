@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
-from AptUrl.Helpers import _
+
 
 from odoo import models, fields, api, exceptions
 from odoo.exceptions import ValidationError
@@ -18,7 +18,7 @@ class SportClubPlayer(models.Model):
     email = fields.Char('email', required=True)
     phone = fields.Char('phone number', required=True)
     identity_card = fields.Char('Identity card', required=True)
-    image = fields.Image('player image', max_width=50, max_height=70, verify_resolution=False)
+    image = fields.Binary('image')
     review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='player_id')
     reservation_ids = fields.One2many(comodel_name='sportclub.reservation', inverse_name='player_id')
     fullname = fields.Char(compute='getfullname', default="player")

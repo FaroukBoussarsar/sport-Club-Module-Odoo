@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
-from AptUrl.Helpers import _
+
 import re
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
@@ -26,5 +26,5 @@ class SportClubOwner(models.Model):
     def _check_value(self):
         regex = '^[a-z0-9]+[._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
         if not(re.search(regex, self.email)):
-            raise ValidationError(_('invalid email !'))
+            raise ValidationError('invalid email !')
 

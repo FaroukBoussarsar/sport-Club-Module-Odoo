@@ -33,6 +33,7 @@
                      <field name="address"/>
                     <field name="email"/>
                      <field name="phone"/>
+
                     </group>
                       <notebook>
                         <page string="liste of sportclubs">

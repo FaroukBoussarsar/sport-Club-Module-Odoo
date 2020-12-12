@@ -2,13 +2,14 @@
 from odoo import models, fields
 import uuid
 
+
 class SportClubReview(models.Model):
     _name = 'sportclub.review'
     _rec_name = 'reviewer_name'
     code = fields.Char(compute='getuniqueid')
     score = fields.Float(required=True)
     description = fields.Text()
-    creaation_date = fields.Datetime('creation date', default=fields.Date.today)
+    creaation_date = fields.Datetime('creation date', default=fields.datetime.today())
     sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub')
 
     player_id = fields.Many2one(comodel_name='sportclub.player')

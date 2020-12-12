@@ -5,7 +5,7 @@ from odoo import models, fields
 class SportClubStadium(models.Model):
     _name = 'sportclub.stadium'
     _rec_name = 'stadium_name'
-    #code = fields.Char()
+    # code = fields.Char()
     stadium_name = fields.Char(String='name', required=True)
     capacity = fields.Integer(required=True)
     creaation_date = fields.Datetime('creation date', required=True)

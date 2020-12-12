@@ -13,12 +13,12 @@ class SportClubReservation(models.Model):
     code = fields.Char(compute='getuniqueid')
     duration = fields.Float(required=True)
     reservation_date = fields.Datetime('reservation date', default=fields.Datetime.today)
-    player_id = fields.Many2one(comodel_name='sportclub.player')
+    player_id = fields.Many2one(comodel_name='sportclub.player',readonly=True )
 
 
     stadium_ids = fields.Many2many(comodel_name='sportclub.stadium', relation='class_reserv_stad',
                                      column1='code',
-                                     column2='stadium_name')
+                                     column2='stadium_name' )
 
 
     def getuniqueid(self):

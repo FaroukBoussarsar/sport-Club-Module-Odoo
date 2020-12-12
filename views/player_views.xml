@@ -21,7 +21,7 @@
         </record>
 
 
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="player_form_view">
             <field name="name">player Form</field>
             <field name="model">sportclub.player</field>
             <field name="arch" type="xml">
@@ -40,7 +40,7 @@
 
                     </group>
                     <notebook>
-                        <page string="liste of stadium">
+                        <page string="liste of reservations">
                             <field name="reservation_ids"/>
                         </page>
                         <page string="liste of review">

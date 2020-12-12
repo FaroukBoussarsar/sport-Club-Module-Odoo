@@ -16,20 +16,26 @@
         </record>
 
 
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="stadium_form_view">
             <field name="name">stadium Form</field>
             <field name="model">sportclub.stadium</field>
             <field name="arch" type="xml">
-                <form>
+                <form create="false">
                     <group>
                         <field name="stadium_name"/>
                         <field name="capacity"/>
                         <field name="creaation_date"/>
                         <field name="sportclub_id"/>
-                        <field name="reservation_ids"/>
 
 
                     </group>
+                    <notebook>
+                        <page string="liste of reservations">
+                            <field name="reservation_ids"/>
+                        </page>
+
+                    </notebook>
+
 
                 </form>
             </field>

@@ -15,7 +15,7 @@ class SportClub(models.Model):
     code_sportclub = fields.Char(compute='getuniqueid')
     creaation_date = fields.Datetime('creation date', required=True)
     surface = fields.Float(required=True)
-    owner_id = fields.Many2one(comodel_name='sportclub.owner')
+    owner_id = fields.Many2one(comodel_name='sportclub.owner', readonly=True)
     # stadium_ids = fields.One2many(comodel_name='sportclub.stadium', inverse_name='sportclub_id', required=True)
     review_ids = fields.One2many(comodel_name='sportclub.review', inverse_name='sportclub_id')
     stadium_ids = fields.Many2many(comodel_name='sportclub.stadium', relation='class_sport_stad',

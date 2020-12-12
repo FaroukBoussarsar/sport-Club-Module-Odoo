@@ -17,8 +17,7 @@
         </record>
 
 
-
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="review_form_view">
             <field name="name">review Form</field>
             <field name="model">sportclub.review</field>
             <field name="arch" type="xml">
@@ -28,11 +27,14 @@
                         <field name="score"/>
                         <field name="description"/>
                         <field name="creaation_date"/>
-                        <field name="player_id"/>
-                        <field name="sportclub_id"/>
 
 
                     </group>
+                    <group>
+                        <field name="player_id"/>
+                        <field name="sportclub_id"/>
+                    </group>
+
 
                 </form>
             </field>
@@ -49,7 +51,6 @@
         </record>
 
 
-
         <!-- Top menu item -->
         <menuitem name="Sport Club" id="sportclub"/>
 
@@ -59,13 +60,11 @@
                   parent="sportclub"/>
 
 
-
         <!-- actions -->
 
         <menuitem name="List of reviews" id="sportclub_review_list"
                   parent="sportclub_review_cat"
                   action="review_action_window"/>
-
 
 
     </data>

@@ -20,7 +20,7 @@
 
 
 
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="owner_form_view">
             <field name="name">owner Form</field>
             <field name="model">sportclub.owner</field>
             <field name="arch" type="xml">

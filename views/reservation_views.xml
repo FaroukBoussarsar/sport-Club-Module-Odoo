@@ -7,30 +7,35 @@
             <field name="model">sportclub.reservation</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="player_id"/>
+
 
                     <field name="duration"/>
                     <field name="reservation_date"/>
+
 
                 </tree>
             </field>
         </record>
 
 
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="reservation_form_view">
             <field name="name">reservation Form</field>
             <field name="model">sportclub.reservation</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
                         <field name="code"/>
-                        <field name="player_id"/>
+
 
                         <field name="duration"/>
-                        <field name="reservation_date"  />
-                        <field name="player_id"  />
+                        <field name="reservation_date"/>
+
 
                     </group>
+                    <group>
+                        <field name="player_id"/>
+                    </group>
+
                     <notebook>
                         <page string="liste of stadium">
                             <field name="stadium_ids"/>

@@ -18,7 +18,7 @@
 
 
 
-        <record model="ir.ui.view" id="student_form_view">
+        <record model="ir.ui.view" id="sportclub_form_view">
             <field name="name">sportclub Form</field>
             <field name="model">sportclub.sportclub</field>
             <field name="arch" type="xml">
@@ -28,9 +28,12 @@
 
                         <field name="creaation_date"/>
                         <field name="surface"/>
-                         <field name="owner_id"/>
 
 
+
+                    </group>
+                    <group>
+                        <field name="owner_id"/>
                     </group>
                      <notebook>
                         <page string="liste of stadium">

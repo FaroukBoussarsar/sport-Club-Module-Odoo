@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="sportclub_name"/>
-                    <field name="code"/>
+
                     <field name="creaation_date"/>
                     <field name="surface"/>
 
@@ -25,7 +25,7 @@
                 <form>
                     <group>
                         <field name="sportclub_name"/>
-                        <field name="code"/>
+
                         <field name="creaation_date"/>
                         <field name="surface"/>
 

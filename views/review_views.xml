@@ -7,7 +7,7 @@
             <field name="model">sportclub.review</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="code"/>
+
                     <field name="score"/>
                     <field name="description"/>
                     <field name="creaation_date"/>
@@ -24,7 +24,7 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="code"/>
+
                         <field name="score"/>
                         <field name="description"/>
                         <field name="creaation_date"/>

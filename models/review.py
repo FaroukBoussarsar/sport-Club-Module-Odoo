@@ -9,7 +9,7 @@ class SportClubReview(models.Model):
     code = fields.Char(compute='getuniqueid')
     score = fields.Float(required=True)
     description = fields.Text()
-    creaation_date = fields.Datetime('creation date', default=fields.datetime.today())
+    creaation_date = fields.Datetime('creation date', default=fields.Date.today)
     sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub')
 
     player_id = fields.Many2one(comodel_name='sportclub.player')

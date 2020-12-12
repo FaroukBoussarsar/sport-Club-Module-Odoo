@@ -1,15 +1,16 @@
 <odoo>
     <data>
-        <!-- explicit list view definition -->
-        <!-- list student -->
+
         <record model="ir.ui.view" id="player_list_view">
             <field name="name">player list</field>
             <field name="model">sportclub.player</field>
             <field name="arch" type="xml">
                 <tree>
+
                     <field name="f_name"/>
                     <field name="l_name"/>
                     <field name="gender"/>
+                    <field name="image"/>
                     <field name="birthday"/>
                      <field name="address"/>
                     <field name="email"/>
@@ -19,7 +20,7 @@
         </record>
 
 
-        <!-- student form -->
+
         <record model="ir.ui.view" id="student_form_view">
             <field name="name">player Form</field>
             <field name="model">sportclub.player</field>
@@ -29,6 +30,7 @@
                         <field name="f_name"/>
                     <field name="l_name"/>
                     <field name="gender"/>
+                        <field name="image" type="Image"/>
                     <field name="birthday"/>
                      <field name="address"/>
                     <field name="email"/>
@@ -49,8 +51,7 @@
         </record>
 
 
-        <!-- actions opening views on models -->
-        <!-- student action -->
+
 
         <record model="ir.actions.act_window" id="player_action_window">
             <field name="name">player window</field>
@@ -58,29 +59,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!--
-        <record model="ir.actions.act_window" id="university.action_window">
-          <field name="name">university window</field>
-          <field name="res_model">university.university</field>
-          <field name="view_mode">tree,form</field>
-        </record>
-        -->
 
-        <!-- server action to the one above -->
-        <!--
-        <record model="ir.actions.server" id="university.action_server">
-          <field name="name">university server</field>
-          <field name="model_id" ref="model_university_university"/>
-          <field name="state">code</field>
-          <field name="code">
-            action = {
-              "type": "ir.actions.act_window",
-              "view_mode": "tree,form",
-              "res_model": self._name,
-            }
-          </field>
-        </record>
-        -->
 
         <!-- Top menu item -->
         <menuitem name="Sport Club" id="sportclub"/>
@@ -91,9 +70,7 @@
                   parent="sportclub"/>
 
 
-        <!--
-        <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>
-        -->
+
         <!-- actions -->
 
         <menuitem name="List of players" id="sportclub_player_list"
@@ -101,9 +78,6 @@
                   action="player_action_window"/>
 
 
-        <!--
-        <menuitem name="Server to list" id="university" parent="university.menu_2"
-                  action="university.action_server"/>
-        -->
+
     </data>
 </odoo>

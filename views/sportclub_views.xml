@@ -1,7 +1,7 @@
 <odoo>
     <data>
         <!-- explicit list view definition -->
-        <!-- list student -->
+
         <record model="ir.ui.view" id="sportclub_list_view">
             <field name="name">sportclub list</field>
             <field name="model">sportclub.sportclub</field>
@@ -17,7 +17,7 @@
         </record>
 
 
-        <!-- student form -->
+
         <record model="ir.ui.view" id="student_form_view">
             <field name="name">sportclub Form</field>
             <field name="model">sportclub.sportclub</field>
@@ -45,7 +45,7 @@
 
 
         <!-- actions opening views on models -->
-        <!-- student action -->
+
 
         <record model="ir.actions.act_window" id="sportclub_action_window">
             <field name="name">sportclub window</field>
@@ -53,29 +53,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!--
-        <record model="ir.actions.act_window" id="university.action_window">
-          <field name="name">university window</field>
-          <field name="res_model">university.university</field>
-          <field name="view_mode">tree,form</field>
-        </record>
-        -->
 
-        <!-- server action to the one above -->
-        <!--
-        <record model="ir.actions.server" id="university.action_server">
-          <field name="name">university server</field>
-          <field name="model_id" ref="model_university_university"/>
-          <field name="state">code</field>
-          <field name="code">
-            action = {
-              "type": "ir.actions.act_window",
-              "view_mode": "tree,form",
-              "res_model": self._name,
-            }
-          </field>
-        </record>
-        -->
 
         <!-- Top menu item -->
         <menuitem name="Sport Club" id="sportclub"/>
@@ -86,9 +64,7 @@
                   parent="sportclub"/>
 
 
-        <!--
-        <menuitem name="Menu 2" id="university.menu_2" parent="university.menu_root"/>
-        -->
+
         <!-- actions -->
 
         <menuitem name="List of sportclubs" id="sportclub_sportclub_list"
@@ -96,9 +72,6 @@
                   action="sportclub_action_window"/>
 
 
-        <!--
-        <menuitem name="Server to list" id="university" parent="university.menu_2"
-                  action="university.action_server"/>
-        -->
+
     </data>
 </odoo>

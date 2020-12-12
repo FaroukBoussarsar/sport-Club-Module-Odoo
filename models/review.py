@@ -12,7 +12,7 @@ class SportClubReview(models.Model):
     score = fields.Float(required=True)
     description = fields.Text()
     creaation_date = fields.Datetime('creation date', default=fields.Datetime.today)
-    sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub' ,readonly=True,required=True)
+    sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub' ,readonly=True)
 
     player_id = fields.Many2one(comodel_name='sportclub.player',readonly=True)
 
@@ -26,5 +26,5 @@ class SportClubReview(models.Model):
 
     @api.constrains('score')
     def _check_value(self):
-        if not( 0 >= self.score > 10):
+        if not(0 < self.score <= 10):
             raise ValidationError('score is between 0 and 10')

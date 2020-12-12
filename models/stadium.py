@@ -13,7 +13,6 @@ class SportClubStadium(models.Model):
     capacity = fields.Integer(required=True)
     creaation_date = fields.Datetime('creation date', required=True)
     sportclub_id = fields.Many2one(comodel_name='sportclub.sportclub' ,readonly=True)
-  #  reservation_ids = fields.Many2one(comodel_name='sportclub.reservation',readonly=True)
     reservation_ids = fields.Many2many(comodel_name='sportclub.reservation', relation='class_reserv_stad',
                                    column1='stadium_name',
                                    column2='code' ,readonly=True)
